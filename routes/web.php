@@ -15,7 +15,7 @@ Route::group(['prefix' => 'api/v1'], function () {
     Route::any('/jump', 'Api\JumpController@getIndex');
 });
 
-Route::group(['prefix'=>'admin','middleware'=>'check_login'], function (){
+Route::group(['prefix'=>'admin'], function (){ //,'middleware'=>'check_login'
 
    Route::any('payment','Auth\AccountController@payment');
 
