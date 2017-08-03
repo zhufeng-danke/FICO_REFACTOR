@@ -1,0 +1,14 @@
+{
+  "name": "Laputa",
+  "dependencies": {
+    "plupload": "~2.*",
+    "jquery": "~2.*",
+    "fontawesome": "~4.6.*",
+    "bootstrap": "~3.3.*",
+    "autocompletelikegoogle": "1.2.*",
+    "bootswatch": "~3.*",
+    "select2": "4.*",
+    "select2-bootstrap-theme": "0.*",
+    "qiniu": "1.0.*"
+  }
+}
