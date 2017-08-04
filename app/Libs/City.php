@@ -71,7 +71,7 @@ class City
     {
         assert(in_array($cityName, Area::listCity()));
 
-        Session::set(self::INTERNAL_SESSION_KEY, $cityName);
+        Session::put(self::INTERNAL_SESSION_KEY, $cityName);
         RedisClient::create()->hSet(self::DEFAULT_CITY_HASH_KEY, CorpAuth::id(), $cityName);
     }
 

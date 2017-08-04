@@ -33,6 +33,60 @@ return [
 
     'connections' => [
 
+        'laputa' => [
+            'driver' => 'mysql',
+            'port' => env('DB_PORT', '3306'),
+            'database' => 'Laputa',
+            'read' => [
+                'host' => env('DB_READ_HOST', 'localhost'),
+                'username' => env('DB_READ_USERNAME', 'root'),
+                'password' => env('DB_READ_PASSWORD', ''),
+            ],
+            'write' => [
+                'host' => env('DB_WRITE_HOST', 'localhost'),
+                'username' => env('DB_WRITE_USERNAME', 'root'),
+                'password' => env('DB_WRITE_PASSWORD', ''),
+            ],
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_general_ci',
+            'prefix' => '',
+            'strict' => false,
+        ],
+
+        'fico' => [
+            'driver' => 'mysql',
+            'port' => env('DB_FICO_PORT', '3306'),
+            'database' => env('DB_FICO_DATABASE', 'forge'),
+            'host' => env('DB_FICO_HOST', 'localhost'),
+            'username' => env('DB_FICO_USERNAME', 'root'),
+            'password' => env('DB_FICO_PASSWORD', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_general_ci',
+            'prefix' => '',
+            'strict' => false,
+        ],
+
+        'forecast' => [
+            'driver' => 'mysql',
+            'port' => env('DB_PORT', '3306'),
+            'database' => 'Forecast',
+            'read' => [
+                'host' => env('DB_READ_HOST', 'localhost'),
+                'username' => env('DB_READ_USERNAME', 'root'),
+                'password' => env('DB_READ_PASSWORD', ''),
+            ],
+            'write' => [
+                'host' => env('DB_WRITE_HOST', 'localhost'),
+                'username' => env('DB_WRITE_USERNAME', 'root'),
+                'password' => env('DB_WRITE_PASSWORD', ''),
+            ],
+            //兼容django,不启用mb4
+            'charset' => 'utf8',
+            'collation' => 'utf8_general_ci',
+            'prefix' => '',
+            'strict' => false,
+        ],
+
         'sqlite' => [
             'driver' => 'sqlite',
             'database' => env('DB_DATABASE', database_path('database.sqlite')),

@@ -29,10 +29,28 @@ return [
         'secret' => env('SPARKPOST_SECRET'),
     ],
 
-    'stripe' => [
-        'model' => App\User::class,
-        'key' => env('STRIPE_KEY'),
-        'secret' => env('STRIPE_SECRET'),
+//    'stripe' => [
+//        'model' => App\User::class,
+//        'key' => env('STRIPE_KEY'),
+//        'secret' => env('STRIPE_SECRET'),
+//    ],
+
+    'qiniu' => [
+        'key' => [
+            //七牛坑爹的API规则导致了没法设置测试key，先放这里，然后定期换吧。
+            'access' => env('QINIU_AKEY', 'AKwQsW7Gjjmrxh2rx6gfAH4PUBzAhmQDQ7ST0vUo'),
+            'secret' => env('QINIU_SKEY', '32GC96pAQvYVVTyzeInfyKNyBJbyKpzs3bIafmR0'),
+        ],
+        'bucket' => [
+            'private' => [
+                'name' => 'private-files',
+                'domain' => 'private.wutongwan.org',
+            ],
+            'public' => [
+                'name' => 'public-files',
+                'domain' => 'public.wutongwan.org',
+            ],
+        ]
     ],
 
 ];

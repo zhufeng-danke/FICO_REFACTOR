@@ -1,0 +1,53 @@
+.bs-center {
+	float: none;
+	margin: 0 auto;
+}
+
+.no-padding-left-right {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.container {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.form-inline .btn-toolbar, .form-horizontal .btn-toolbar {
+	margin-bottom: 5px;
+}
+
+.form-inline .btn-toolbar .pull-right a:not(:last-child), .form-horizontal .btn-toolbar .pull-right a:not(:last-child), .form .btn-toolbar .pull-right a:not(:last-child) {
+	margin-right: 5px;
+}
+
+/* 表格文本垂直居中 */
+.table tbody > tr > td.vert-align {
+	vertical-align: middle;
+}
+
+.ibox-heading {
+	padding: 5px;
+}
+
+/****** new style *******/
+body.mini-navbar .navbar-default .nav > li > a{
+	font-size: inherit;
+	padding: 10px 15px;
+}
+
+/* 窄菜单 */
+@media (min-width: 768px) {
+	#page-wrapper {
+		margin: 0 0 0 180px;
+	}
+	.navbar-static-side {
+		width: 180px;
+	}
+}
+
+/* 四栏信息表格 */
+.table-info-list th, .table-info-list td {
+	width: 25%;
+	text-align: center;
+}
