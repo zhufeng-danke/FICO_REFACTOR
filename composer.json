@@ -22,7 +22,10 @@
     },
     "autoload": {
         "classmap": [
-            "database"
+            "app/Models",
+            "app/Tools",
+            "app/Libs",
+            "app/Exceptions"
         ],
         "files": [
             "app/GlobalFunctions.php"
