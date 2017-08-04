@@ -16,6 +16,11 @@ class CheckLogin
      */
     public function handle($request, Closure $next)
     {
+        if (config('app.env') != 'production'){
+            //非生产环境直接跳过验证
+            
+            return $next($request);
+        }
 
         if(!Session::has('corp_user')){
             // TODO::未登录处理
