@@ -183,7 +183,7 @@ trait RapidAssessment
      */
     public function anyCreateInfo(Request $request)
     {
-        $this->assertCan('BI_普租情报_新增');
+//        $this->assertCan('BI_普租情报_新增');
         $mode = 'public';//文件存储模式
         $title = '提交情报';
         $record = $data = [];

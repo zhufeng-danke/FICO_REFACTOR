@@ -24,4 +24,12 @@ Route::group(['prefix'=>'admin','middleware'=>'check_login'], function (){
        Route::any('landlord','Auth\AccountController@landlord');
    });
 
+   Route::group(['prefix'=> 'bi/risk-evaluation'], function () {
+       Route::any('create-info','Admin\BI\RiskEvaluationController@anyCreateInfo');
+       Route::any('/','Admin\BI\RiskEvaluationController@anyIndex');
+       Route::get('detail','Admin\BI\RiskEvaluationController@getDetail');
+       Route::any('block-words','Admin\BI\RiskEvaluationController@anyBlockWords');
+       Route::any('query-xiao-qu','Admin\BI\RiskEvaluationController@anyQueryXiaoQu');
+   });
+
 });
